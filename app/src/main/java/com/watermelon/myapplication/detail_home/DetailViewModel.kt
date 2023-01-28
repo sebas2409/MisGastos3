@@ -43,6 +43,7 @@ class DetailViewModel @Inject constructor(private val detailProductStorer: Detai
     fun removeProduct(it: ProductResponse) {
         viewModelScope.launch {
             try {
+                _products.value = _products.value.filter { product -> product.id != it.id }
                 detailProductStorer.deleteProduct(it.id.toString())
                 getData()
             } catch (e: Exception) {

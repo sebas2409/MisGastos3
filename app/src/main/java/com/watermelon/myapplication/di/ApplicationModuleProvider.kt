@@ -18,7 +18,7 @@ class ApplicationModuleProvider {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://192.168.1.135:8080")
+            .baseUrl("https://misgastos3backend-production.up.railway.app")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

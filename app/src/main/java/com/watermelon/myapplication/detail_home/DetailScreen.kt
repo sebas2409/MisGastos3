@@ -58,7 +58,7 @@ fun DetailScreen(detailViewModel: DetailViewModel) {
                         background = {
                             val color by animateColorAsState(
                                 when (dismissState.targetValue) {
-                                    DismissValue.Default -> Color.White
+                                    DismissValue.Default -> Color.Transparent
                                     else -> Color.Red
                                 }
                             )
